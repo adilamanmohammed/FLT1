@@ -1,18 +1,29 @@
 import sys
 
-Specification_ndfsm = []
-test_string = []
-ndfsm_status = 0
+Specification_ndfsm = [] #3d array which has nfsm specifications
+test_string = []   #stores the test string
+ndfsm_status = 0   #store the state number while reading the string
 alpha_position = ""
 
+# Initialize the current state set 'st'
+st = set()
+# Initialize the next state set 'st1'
+st1 = set()
+# Initialize 'st' with epsilon-closure of the start state
+# st = eps(s)
+
+
+#stores nfsm specification in Specification_ndfsm
 def read_file_to_2d_array(file_path, array):
     try:
         with open(file_path, 'r') as file:
             for line in file:
                 if line.strip():
-                    # Remove "[" and "]" and then split the line on whitespace
-                    cleaned_line = line.replace('[', '').replace(']', '')
+                    # Replace empty square brackets "[]" with '0' in the line
+                    cleaned_line = line.replace('[]', '0')
                     elements = cleaned_line.split()
+                    # Remove "[" and "]" from individual elements
+                    elements = [e.strip('[]') for e in elements]
                     array.append(elements)
         # Display the Specification_ndfsm
         for row in array:
@@ -22,6 +33,10 @@ def read_file_to_2d_array(file_path, array):
     except Exception as e:
         print(f"An error occurred: {e}")
 
+
+
+
+#stores the test string in test_string
 def read_file_to_single_string(file_path, array):
     try:
         with open(file_path, 'r') as file:
@@ -36,6 +51,8 @@ def read_file_to_single_string(file_path, array):
     except Exception as e:
         print(f"An error occurred: {e}")
 
+
+#used to get the aphabet position while reading the test string
 def check_alpha_position_pos(alphabet):
     for i in range(string_length):
         if alphabet==Specification_ndfsm[0][i]:
@@ -44,43 +61,24 @@ def check_alpha_position_pos(alphabet):
     else:
         print(alphabet+" not found")
 
+def eps(state, delta, num_states):
+    result = {state}
+    while True:
+        new_states = set()
+        for p in result:
+            # Assuming the state number is 1 less than its index in the delta list
+            transitions = delta[int(p)-1]
+            epsilon_transitions = transitions[2]  # '?' (epsilon) transitions are the third item
+            for r in epsilon_transitions.split(','):
+                if r and r not in result:
+                    new_states.add(r)
+        if not new_states:
+            break
+        result.update(new_states)
+    return result
 
-def eps(state, ndfsm_transitions):
-    # Find states reachable from 'state' via epsilon transitions
-    epsilon_states = {state}
-    for transition in ndfsm_transitions:
-        if transition[0] == state and transition[1] == '?':  # Assuming '?' represents epsilon
-            epsilon_states.add(transition[2])
-    return epsilon_states
 
-def get_transitions(state, symbol, ndfsm_transitions):
-    # Find states reachable from 'state' via 'symbol'
-    next_states = set()
-    for transition in ndfsm_transitions:
-        if transition[0] == state and transition[1] == symbol:
-            next_states.add(transition[2])
-    return next_states
 
-def ndfsmsimulate(ndfsm, w):
-    input_symbols = ndfsm[0]
-    transitions = ndfsm[1:]
-    accepting_states = Specification_ndfsm[arraylength-1]  # Assuming the last row lists accepting states
-
-    st = eps(ndfsm[1][0], transitions)  # Start with epsilon transitions from the first state
-    for c in w:
-        st1 = set()
-        for q in st:
-            next_states = get_transitions(q, c, transitions)
-            for r in next_states:
-                st1 = st1.union(eps(r, transitions))
-        st = st1
-        if not st:
-            return "reject"
-
-    if st.intersection(set(accepting_states)):
-        return "accept"
-    else:
-        return "reject"
 
 
 if __name__ == "__main__":
@@ -108,12 +106,28 @@ if __name__ == "__main__":
     print(string_length,end="")
     print("\nfile3 content by position:", end=" ")
     print(test_string[0][0])
+
     alpha_position = test_string[0][0]
 
     #printing specific element by position
     print("\nprinting specific element by position (Specification_ndfsm):", end="")
-    print(Specification_ndfsm[0][0])
+    print(Specification_ndfsm[1][0][2])
 
 
     #printing the specific alphabet position in transition
     print(check_alpha_position_pos(test_string[0][2]))
+
+    #storeing the final states
+    final_states=Specification_ndfsm[arraylength-1]
+    print(final_states)
+
+    delta = Specification_ndfsm[1:-1]
+    print("\ndelta:",end="")
+    print(delta)
+
+    num_states = len(delta)  # Total number of states
+    print(num_states)
+    closure_of_1 = eps('2', delta, num_states)
+    print("Epsilon-closure of state 1:", closure_of_1)
+
+    # print(eps_function(1))
