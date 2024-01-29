@@ -44,6 +44,45 @@ def check_alpha_position_pos(alphabet):
     else:
         print(alphabet+" not found")
 
+
+def eps(state, ndfsm_transitions):
+    # Find states reachable from 'state' via epsilon transitions
+    epsilon_states = {state}
+    for transition in ndfsm_transitions:
+        if transition[0] == state and transition[1] == '?':  # Assuming '?' represents epsilon
+            epsilon_states.add(transition[2])
+    return epsilon_states
+
+def get_transitions(state, symbol, ndfsm_transitions):
+    # Find states reachable from 'state' via 'symbol'
+    next_states = set()
+    for transition in ndfsm_transitions:
+        if transition[0] == state and transition[1] == symbol:
+            next_states.add(transition[2])
+    return next_states
+
+def ndfsmsimulate(ndfsm, w):
+    input_symbols = ndfsm[0]
+    transitions = ndfsm[1:]
+    accepting_states = Specification_ndfsm[arraylength-1]  # Assuming the last row lists accepting states
+
+    st = eps(ndfsm[1][0], transitions)  # Start with epsilon transitions from the first state
+    for c in w:
+        st1 = set()
+        for q in st:
+            next_states = get_transitions(q, c, transitions)
+            for r in next_states:
+                st1 = st1.union(eps(r, transitions))
+        st = st1
+        if not st:
+            return "reject"
+
+    if st.intersection(set(accepting_states)):
+        return "accept"
+    else:
+        return "reject"
+
+
 if __name__ == "__main__":
     if len(sys.argv) != 3:
         print("Usage: python your_script_name.py <path_to_file2> <path_to_file3>")
@@ -78,4 +117,3 @@ if __name__ == "__main__":
 
     #printing the specific alphabet position in transition
     print(check_alpha_position_pos(test_string[0][2]))
-
