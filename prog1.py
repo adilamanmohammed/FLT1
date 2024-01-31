@@ -35,8 +35,54 @@ def eps(transitions, q, epsilon_symbol, alphabets):
 
     return closure
 
+def ndfsmsimulate(transitions, w, alphabets, final_states, start_state=1):
+    """
+    Simulate an NDFSM for a given string w.
+
+    :param transitions: The transition table of the NDFSM.
+    :param w: The input string to simulate.
+    :param alphabets: The list of alphabet symbols including epsilon symbol.
+    :param final_states: The list of final states in the NDFSM.
+    :param start_state: The start state of the NDFSM (default is 1).
+    :return: 'Accept' if the string is accepted by the NDFSM, else 'Reject'.
+    """
+    epsilon_symbol = '?'  # Assuming '?' represents epsilon transitions
+
+    # Start with the epsilon closure of the start state
+    current_state = eps(transitions, start_state, epsilon_symbol, alphabets)
+    print(f"Initial state: {current_state}")
+
+    # Process each symbol in w
+    for c in w:
+        next_state = set()
+        for q in current_state:
+            q_index = q - 1  # Adjust for 0-indexed array
+            if c in alphabets:
+                c_index = alphabets.index(c)
+                transitions_from_q = transitions[q_index][c_index]
+                if transitions_from_q != 0:
+                    # Ensure transitions_from_q is a list
+                    transitions_from_q = transitions_from_q if isinstance(transitions_from_q, list) else [transitions_from_q]
+                    for p in transitions_from_q:
+                        next_state.update(eps(transitions, p, epsilon_symbol, alphabets))
+        current_state = next_state
+
+    # Check for acceptance
+    if any(state in final_states for state in current_state):
+        return "Accept"
+    else:
+        return "Reject"
 
 
+def read_test_string(file_name):
+    """
+    Read the first line from a file and return it as a string.
+
+    :param file_name: The name of the file to read from.
+    :return: The first line of the file as a string.
+    """
+    with open(file_name, 'r') as file:
+        return file.readline().strip()
 
 
 
@@ -99,6 +145,8 @@ if __name__ == "__main__":
     file2_path = sys.argv[1]
     file3_path = sys.argv[2]
 
+
+
 # Initialize empty lists to store alphabets, transitions, and final_states
 # alphabets = []
 # transitions = []
@@ -111,6 +159,13 @@ print("Alphabets:", alphabets)
 print("Transitions:", transitions)
 print("Final States:", final_states)
 
+# Read test string from file3.txt
+test_string = read_test_string(file3_path)
+print("Test String(w):", test_string)
+
+
+transition_length=len(transitions)
+final_state_length=len(final_states)
 # print(transitions[0][1])
 
 length = length_of_transition(transitions, 0, 0)
@@ -127,5 +182,13 @@ print("Length of transitions:", length)
 # print(eps(transitions, 3, '?', alphabets))
 # print(eps(transitions, 4, '?', alphabets))
 
-for i in range(1,len(transitions)+1):
+for i in range(1,transition_length+1):
     print(eps(transitions, i, '?', alphabets))
+
+print(transition_length)
+print(final_state_length)
+
+
+# Simulate NDFSM
+result = ndfsmsimulate(transitions, test_string, alphabets, final_states)
+print("Result for test string",test_string,":", result)
