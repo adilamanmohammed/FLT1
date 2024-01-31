@@ -119,8 +119,13 @@ print("Length of transitions:", length)
 #calling transitions by positions
 # print(transitions[0][2])
 
-epsilon_closure_1 = eps(transitions, 1, '?', alphabets)
-epsilon_closure_2 = eps(transitions, 2, '?', alphabets)
+# epsilon_closure_1 = eps(transitions, 1, '?', alphabets)
+# epsilon_closure_2 = eps(transitions, 2, '?', alphabets)
 
-print("Epsilon closure of state 1:", epsilon_closure_1)
-print("Epsilon closure of state 2:", epsilon_closure_2)
+# print("Epsilon closure of state 1:", epsilon_closure_1)
+# print("Epsilon closure of state 2:", epsilon_closure_2)
+# print(eps(transitions, 3, '?', alphabets))
+# print(eps(transitions, 4, '?', alphabets))
+
+for i in range(1,len(transitions)+1):
+    print(eps(transitions, i, '?', alphabets))
