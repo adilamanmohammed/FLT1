@@ -1,0 +1,365 @@
+Script started on 2024-01-31 05:52:40+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="121" LINES="11"]
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Length of transitions: 1
+Epsilon closure of state 1: {1, 2, 3}
+Epsilon closure of state 2: {1, 2, 3}
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Length of transitions: 1
+Epsilon closure of state 1: {1, 2, 3}
+Epsilon closure of state 2: {1, 2, 3}
+{1, 2, 3}
+{4}
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ 
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Length of transitions: 1
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 130, in <module>
+    for i in range(len(transition)):
+NameError: name 'transition' is not defined. Did you mean: 'transitions'?
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Length of transitions: 1
+{0}
+{1, 2, 3}
+{1, 2, 3}
+{1, 2, 3}
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ 
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Length of transitions: 1
+Epsilon closure of state 1: {1, 2, 3}
+Epsilon closure of state 2: {1, 2, 3}
+{1, 2, 3}
+{4}
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Length of transitions: 1
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 130, in <module>
+    for i in range(0,len(transition)+2):
+NameError: name 'transition' is not defined. Did you mean: 'transitions'?
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Length of transitions: 1
+{0}
+{1, 2, 3}
+{1, 2, 3}
+{1, 2, 3}
+{4}
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 131, in <module>
+    print(eps(transitions, i, '?', alphabets))
+  File "/workspaces/FLT1/prog1.py", line 23, in eps
+    epsilon_transitions = transitions[current_state][epsilon_index]
+IndexError: list index out of range
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Length of transitions: 1
+{0}
+{1, 2, 3}
+{1, 2, 3}
+{1, 2, 3}
+{4}
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Length of transitions: 1
+{1, 2, 3}
+{1, 2, 3}
+{1, 2, 3}
+{4}
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Length of transitions: 1
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 131, in <module>
+    for i in range(1,len(transition_length)+1):
+TypeError: object of type 'int' has no len()
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Length of transitions: 1
+{1, 2, 3}
+{1, 2, 3}
+{1, 2, 3}
+{4}
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Length of transitions: 1
+{1, 2, 3}
+{1, 2, 3}
+{1, 2, 3}
+{4}
+1
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3, 4]
+Length of transitions: 1
+{1, 2, 3}
+{1, 2, 3}
+{1, 2, 3}
+{4}
+2
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Length of transitions: 1
+{1, 2, 3}
+{1, 2, 3}
+{1, 2, 3}
+{4}
+4
+1
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Test String: aabab
+Length of transitions: 1
+{1, 2, 3}
+{1, 2, 3}
+{1, 2, 3}
+{4}
+4
+1
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Test String(w): aabab
+Length of transitions: 1
+{1, 2, 3}
+{1, 2, 3}
+{1, 2, 3}
+{4}
+4
+1
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', 'c', '?']
+Transitions: [[0, 1, 0, 2], [1, [3, 5], 0, 7], [4, 0, 4, 0], [0, 0, 2, 0], [6, 6, 0, 0], [0, 0, 2, 2], [0, 8, 0, 0], [0, 0, 0, 0]]
+Final States: [8]
+Test String(w): aabab
+Length of transitions: 1
+{1, 2, 7}
+{2, 7}
+{3}
+{4}
+{5}
+{2, 6, 7}
+{7}
+{8}
+8
+1
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Test String(w): aabab
+Length of transitions: 1
+{1, 2, 3}
+{1, 2, 3}
+{1, 2, 3}
+{4}
+4
+1
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Test String(w): aabab
+Length of transitions: 1
+{1, 2, 3}
+{1, 2, 3}
+{1, 2, 3}
+{4}
+4
+1
+Result for test string: Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Test String(w): aabab
+Length of transitions: 1
+{1, 2, 3}
+{1, 2, 3}
+{1, 2, 3}
+{4}
+4
+1
+Result for test string aabab : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[4, 0, 2], [1, 3, 3], [0, 0, 1], [0, 3, 0]]
+Final States: [3]
+Test String(w): aabab
+Length of transitions: 1
+{1, 2, 3}
+{1, 2, 3}
+{1, 2, 3}
+{4}
+4
+1
+Initial state: {1, 2, 3}
+Result for test string aabab : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', 'c']
+Transitions: [[2, 1, 1], [2, 3, 1], [2, 1, 4], [5, 1, 1], [2, 6, 1], [2, 7, 4], [7, 7, 7]]
+Final States: [7]
+Test String(w): aabab
+Length of transitions: 1
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 186, in <module>
+    print(eps(transitions, i, '?', alphabets))
+  File "/workspaces/FLT1/prog1.py", line 14, in eps
+    epsilon_index = alphabets.index(epsilon_symbol)  # Find the index of epsilon in alphabets
+ValueError: '?' is not in list
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', 'c', '?']
+Transitions: [[2, 1, 1, 0], [2, 3, 1, 0], [2, 1, 4, 0], [5, 1, 1, 0], [2, 6, 1, 0], [2, 7, 4, 0], [7, 7, 7, 0]]
+Final States: [7]
+Test String(w): aabab
+Length of transitions: 1
+{1}
+{2}
+{3}
+{4}
+{5}
+{6}
+{7}
+7
+1
+Initial state: {1}
+Result for test string aabab : Reject
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', 'c', '?']
+Transitions: [[2, 1, 1, 0], [2, 3, 1, 0], [2, 1, 4, 0], [5, 1, 1, 0], [2, 6, 1, 0], [2, 7, 4, 0], [7, 7, 7, 0]]
+Final States: [7]
+Test String(w): abcabb
+Length of transitions: 1
+{1}
+{2}
+{3}
+{4}
+{5}
+{6}
+{7}
+7
+1
+Initial state: {1}
+Result for test string abcabb : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', 'c', '?']
+Transitions: [[2, 1, 1, 0], [2, 3, 1, 0], [2, 1, 4, 0], [5, 1, 1, 0], [2, 6, 1, 0], [2, 7, 4, 0], [7, 7, 7, 0]]
+Final States: [7]
+Test String(w): abcabbb
+Length of transitions: 1
+{1}
+{2}
+{3}
+{4}
+{5}
+{6}
+{7}
+7
+1
+Initial state: {1}
+Result for test string abcabbb : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', 'c', '?']
+Transitions: [[2, 1, 1, 0], [2, 3, 1, 0], [2, 1, 4, 0], [5, 1, 1, 0], [2, 6, 1, 0], [2, 7, 4, 0], [7, 7, 7, 0]]
+Final States: [7]
+Test String(w): abcabbbaaaaaaabbbb
+Length of transitions: 1
+{1}
+{2}
+{3}
+{4}
+{5}
+{6}
+{7}
+7
+1
+Initial state: {1}
+Result for test string abcabbbaaaaaaabbbb : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', 'c', '?']
+Transitions: [[2, 1, 1, 0], [2, 3, 1, 0], [2, 1, 4, 0], [5, 1, 1, 0], [2, 6, 1, 0], [2, 7, 4, 0], [7, 7, 7, 0]]
+Final States: [7]
+Test String(w): bbbbbbbabaabbbaaabcabbbaaaaaaabbbb
+Length of transitions: 1
+{1}
+{2}
+{3}
+{4}
+{5}
+{6}
+{7}
+7
+1
+Initial state: {1}
+Result for test string bbbbbbbabaabbbaaabcabbbaaaaaaabbbb : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', 'c', '?']
+Transitions: [[2, 1, 1, 0], [2, 3, 1, 0], [2, 1, 4, 0], [5, 1, 1, 0], [2, 6, 1, 0], [2, 7, 4, 0], [7, 7, 7, 0]]
+Final States: [7]
+Test String(w): bbbbbbbabaabbbaaabbcabbbaaaaaaabbbb
+Length of transitions: 1
+{1}
+{2}
+{3}
+{4}
+{5}
+{6}
+{7}
+7
+1
+Initial state: {1}
+Result for test string bbbbbbbabaabbbaaabbcabbbaaaaaaabbbb : Reject
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', 'c', '?']
+Transitions: [[2, 1, 1, 0], [2, 3, 1, 0], [2, 1, 4, 0], [5, 1, 1, 0], [2, 6, 1, 0], [2, 7, 4, 0], [7, 7, 7, 0]]
+Final States: [7]
+Test String(w): bbbbbbbabaabbbaaabcabbbaaaaaaabbbb
+Length of transitions: 1
+{1}
+{2}
+{3}
+{4}
+{5}
+{6}
+{7}
+7
+1
+Initial state: {1}
+Result for test string bbbbbbbabaabbbaaabcabbbaaaaaaabbbb : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ exit
+
+Script done on 2024-01-31 06:56:32+00:00 [COMMAND_EXIT_CODE="0"]
