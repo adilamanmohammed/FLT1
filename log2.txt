@@ -1,0 +1,393 @@
+Script started on 2024-01-31 03:58:22+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="121" LINES="13"]
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 8, in <module>
+    if len(sys.argv) != 3:
+NameError: name 'sys' is not defined
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 36, in <module>
+    final_states = [int(s) for s in file.readline().split()]
+  File "/workspaces/FLT1/prog1.py", line 36, in <listcomp>
+    final_states = [int(s) for s in file.readline().split()]
+ValueError: invalid literal for int() with base 10: '[1]'
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 32, in <module>
+    final_states = [int(s) for s in final_states_line[1:-1].split(',')]
+  File "/workspaces/FLT1/prog1.py", line 32, in <listcomp>
+    final_states = [int(s) for s in final_states_line[1:-1].split(',')]
+ValueError: invalid literal for int() with base 10: '1] [] [1'
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 32, in <module>
+    final_states = [int(s) for s in final_states_line]
+  File "/workspaces/FLT1/prog1.py", line 32, in <listcomp>
+    final_states = [int(s) for s in final_states_line]
+ValueError: invalid literal for int() with base 10: '[1]'
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: [[], [[1], [1]]]
+Final States: [2]
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Usage: python your_script_name.py <path_to_file2>
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Usage: python your_script_name.py <path_to_file2>
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: [[], [[1], [1]]]
+Final States: [2]
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 main.py F[Kfile2.txt file3.txt 
+\
+File2 content:
+['a', 'b', '?']
+['1', '0', '1']
+['1', '2', '1']
+['2']
+
+array length:4
+
+File3 content:aabab
+string length:5
+file3 content by position: a
+
+printing specific element by position (Specification_ndfsm):1
+['2']
+
+delta:[['1', '0', '1'], ['1', '2', '1']]
+2
+Epsilon-closure of state 1: {'1'}
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ \python3 main.py file2.txt file3.txt 
+
+File2 content:
+['a', 'b', '?']
+['1,2', '0', '1']
+['1', '2', '1']
+['2']
+
+array length:4
+
+File3 content:aabab
+string length:5
+file3 content by position: a
+
+printing specific element by position (Specification_ndfsm):1
+['2']
+
+delta:[['1,2', '0', '1'], ['1', '2', '1']]
+2
+Epsilon-closure of state 1: {'1'}
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 main.py file2.txt file3.txt [1@prog1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Alphabets: ['a', 'b', '?']
+Transitions: ['1,2  1', '1 2 1']
+Final States: ['2']
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: ['1,2  1', '1 2 1']
+Final States: ['2']
+1,2  1
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 45, in <module>
+    print(transitions[0])[0]
+TypeError: 'NoneType' object is not subscriptable
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+  File "/workspaces/FLT1/prog1.py", line 45
+    print(transitions[0])[0])
+                            ^
+SyntaxError: unmatched ')'
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: ['1,2  1', '1 2 1']
+Final States: ['2']
+1
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: ['1,2  1', '1 2 1']
+Final States: ['2']
+,
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: ['1,2  1', '1 2 1']
+Final States: ['2']
+ 
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: ['1,2  1', '1 2 1']
+Final States: ['2']
+ 
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt [1Pmain[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@prog1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: ['1,2  1', '1 2 1']
+Final States: ['2']
+ 
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: [['1,2  1'], ['1 2 1']]
+Final States: ['2']
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: [['1,2  1'], ['1 2 1']]
+Final States: ['2']
+[['1,2  1'], ['1 2 1']]
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: [['1,2  1'], ['1 2 1']]
+Final States: ['2']
+['1,2  1']
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: [['1,2  1'], ['1 2 1']]
+Final States: ['2']
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 48, in <module>
+    print(transitions[0][1])
+IndexError: list index out of range
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: [['1,2][][1', '1][2][1']]
+Final States: ['[1,2]', '[]', '[1]', '[1]', '[2]', '[1]', '2']
+1][2][1
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: [['1,2', '0', '1'], ['1', '2', '1']]
+Final States: ['[1,2]', '[]', '[1]', '[1]', '[2]', '[1]', '2']
+0
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: [['1,2', '0', '1'], ['1', '2', '1']]
+Final States: ['[1,2]', '[]', '[1]', '[1]', '[2]', '[1]', '2']
+1,2
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: [['1,2', '0', '1'], ['1', '2', '1']]
+Final States: ['[1,2]', '[]', '[1]', '[1]', '[2]', '[1]', '2']
+1
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Alphabets: ['a', 'b', '?']
+Transitions: [['1,2', '0', '1'], ['1', '2', '1']]
+Final States: ['[1,2]', '[]', '[1]', '[1]', '[2]', '[1]', '2']
+,
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 55, in <module>
+    alphabets, transitions, final_states = parse_file('file2.txt')
+  File "/workspaces/FLT1/prog1.py", line 32, in parse_file
+    final_states.extend([int(x) for x in line.split()])
+  File "/workspaces/FLT1/prog1.py", line 32, in <listcomp>
+    final_states.extend([int(x) for x in line.split()])
+ValueError: invalid literal for int() with base 10: '[1,2]'
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ 
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt 
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 55, in <module>
+    alphabets, transitions, final_states = parse_file('file2.txt')
+  File "/workspaces/FLT1/prog1.py", line 32, in parse_file
+    final_states.extend([int(x) for x in line.split()])
+  File "/workspaces/FLT1/prog1.py", line 32, in <listcomp>
+    final_states.extend([int(x) for x in line.split()])
+ValueError: invalid literal for int() with base 10: '[1,2]'
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt [K
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 55, in <module>
+    alphabets, transitions, final_states = parse_file('file2.txt')
+  File "/workspaces/FLT1/prog1.py", line 32, in parse_file
+    final_states.extend([int(x) for x in line.split()])
+  File "/workspaces/FLT1/prog1.py", line 32, in <listcomp>
+    final_states.extend([int(x) for x in line.split()])
+ValueError: invalid literal for int() with base 10: '[1,2]'
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[1, 2, 0, 1], [1, 2, 1]]
+Final States: [2]
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 59, in <module>
+    alphabets, transitions, final_states = parse_file('file2.txt')
+  File "/workspaces/FLT1/prog1.py", line 36, in parse_file
+    final_states = [int(state) for state in final_state_section[0].split()]
+  File "/workspaces/FLT1/prog1.py", line 36, in <listcomp>
+    final_states = [int(state) for state in final_state_section[0].split()]
+ValueError: invalid literal for int() with base 10: '[1,2]'
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 56, in <module>
+    alphabets, transitions, final_states = parse_file('file2.txt')
+  File "/workspaces/FLT1/prog1.py", line 33, in parse_file
+    final_states.extend([int(x) for x in line.split()])
+  File "/workspaces/FLT1/prog1.py", line 33, in <listcomp>
+    final_states.extend([int(x) for x in line.split()])
+ValueError: invalid literal for int() with base 10: '[1,2]'
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ 
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+2
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+1
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+2
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 66, in <module>
+    print(transitions[0][0][2])
+IndexError: list index out of range
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+1
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 66, in <module>
+    print(transitions[0][1][0])
+TypeError: 'int' object is not subscriptable
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+0
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+0
+2
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+0
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 68, in <module>
+    print(len(transitions[0][1]))
+TypeError: object of type 'int' has no len()
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+0
+Length of transitions[0][0]: 2
+\[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ \[Kpython3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+0
+Length of transitions: 1
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], [3, 5, 8], 1], [1, 2, 1]]
+Final States: [2, 8, 9, 10, 6]
+[3, 5, 8]
+Length of transitions: 3
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], [3, 5, 8], 1], [1, 2, 1]]
+Final States: [2, 8, 9, 10, 6]
+[3, 5, 8]
+Length of transitions: 3
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 77, in <module>
+    print(Transitions[0][2])
+NameError: name 'Transitions' is not defined. Did you mean: 'transitions'?
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], [3, 5, 8], 1], [1, 2, 1]]
+Final States: [2, 8, 9, 10, 6]
+[3, 5, 8]
+Length of transitions: 3
+1
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], [3, 5, 8], 1], [1, 2, 1]]
+Final States: [2, 8, 9, 10, 6]
+[3, 5, 8]
+Length of transitions: 1
+1
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], [3, 5, 8], 1], [1, 2, 1]]
+Final States: [2, 8, 9, 10, 6]
+[3, 5, 8]
+Length of transitions: 1
+1
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], [3, 5, 8], 1], [1, 2, 1]]
+Final States: [2, 8, 9, 10, 6]
+Length of transitions: 2
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], [3, 5, 8], 1], [1, 2, 1]]
+Final States: [2, 8, 9, 10, 6]
+Length of transitions: 2
+2
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ [K[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+Length of transitions: 2
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+Length of transitions: 2
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 116, in <module>
+    epsilon_closure_1 = eps(transitions, 1, '?', alphabets)
+  File "/workspaces/FLT1/prog1.py", line 27, in eps
+    for state in epsilon_transitions:
+TypeError: 'int' object is not iterable
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+Length of transitions: 2
+Traceback (most recent call last):
+  File "/workspaces/FLT1/prog1.py", line 119, in <module>
+    epsilon_closure_1 = eps(transitions, 1, '?', alphabets)
+  File "/workspaces/FLT1/prog1.py", line 29, in eps
+    for state in epsilon_transitions:
+TypeError: 'int' object is not iterable
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+Length of transitions: 2
+Epsilon closure of state 1: {1}
+Epsilon closure of state 2: {2}
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+Length of transitions: 2
+Epsilon closure of state 1: {1}
+Epsilon closure of state 2: {2}
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file2.txt file3.txt
+Alphabets: ['a', 'b', '?']
+Transitions: [[[1, 2], 0, 1], [1, 2, 1]]
+Final States: [2]
+Length of transitions: 2
+Epsilon closure of state 1: {1}
+Epsilon closure of state 2: {1, 2}
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ exit
+
+Script done on 2024-01-31 05:52:01+00:00 [COMMAND_EXIT_CODE="0"]
