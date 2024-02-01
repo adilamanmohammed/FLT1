@@ -2,63 +2,57 @@ import sys
 
 
 def nfsmbuild(substring):
-    alphabets = sorted(set(substring))  # Alphabet without epsilon
-    states = list(range(1, len(substring) + 2)) # list of state numbers
-    transitions = [[set() for _ in alphabets + ['?']] for _ in states]#transition rules for each state 
+    alphabets = sorted(set(substring)) 
+    states = list(range(1, len(substring) + 2))
+    transitions = [[set() for _ in alphabets + ['?']] for _ in states]
 
-    #start state transitions
-    i = 0
-    alhpalen= len(alphabets)
-    while i < alhpalen:#each character in alphabets
-        c = alphabets[i]
-        if c == substring[0]:  # If the character matches the first character of the substring, it transitions to the second state also.
-            transitions[0][i] = {1, 2}
-        else:  # Otherwise, it remains in the first state
-            transitions[0][i] = {1}
-        i += 1 
+    i = 0 #start state transitions
+    alphabetlen= len(alphabets)
+
+    # Iterate through each character in the alphabet
+    for idx in range(alphabetlen):
+        char = alphabets[idx]
+        # Transition to the second state if the character matches the first character of the substring
+        transitions[0][idx] = {1, 2} if char == substring[0] else {1}
+
 
     #remaining states
-    i = 1
-    while i < len(substring):
-        c = substring[i]
-        index = alphabets.index(c)
-        # Increment state number by 1, if not do not 
+    # Loop through the substring, starting from the second character
+    for i in range(1, len(substring)):
+        c = substring[i]  # Current character in substring
+        index = alphabets.index(c)  # Find the index of the character in alphabets
+        # Determine the next state, ensuring it doesn't exceed the number of states
         nextstate = i + 2 if i + 1 < len(states) else len(states)
-        transitions[i][index].add(nextstate)
-        i += 1
+        transitions[i][index].add(nextstate)  # Update the transition for the current state and character
 
-    # Final state loops back to itself for all characters
-    i = 0
-    while i < len(alphabets):
+
+    # For each character in the alphabet, the final state transitions back to itself
+    for i in range(len(alphabets)):
         transitions[-1][i] = {len(states)}
-        i += 1
 
-    #epsilon transitions
-    i = 0
-    while i < len(transitions):
+
+    # Initialize epsilon transitions for each state
+    for i in range(len(transitions)):
         transitions[i][-1] = set()
-        i += 1
 
-    # Converting sets to strings
+
+    # Convert sets in transitions to strings and format the transitions
     t = [
         ['[{}]'.format(','.join(map(str, sorted(state)))) if state else '[]' for state in row]
-        for row in transitions]
+        for row in transitions
+    ]
 
-    # adding epsilon- '?'
+    # Extend alphabet with epsilon represented as '?'
     epsilon_alphabet = ' '.join(alphabets) + ' ?'
 
-    # Final State
-    finalstates = ' '.join(map(str, [len(states)]))
+    # String representation of the final states
+    final_states = ' '.join(map(str, [len(states)]))
 
-    #NFSM
+    # Assemble the NFSM output
     output = epsilon_alphabet + "\n\n"
-    for r in t:
-        for item in r:
-            output += item + ' '
-        output = output[:-1]  # Remove the last space
-        output += "\n"
-    output += "\n" + finalstates
-
+    for row in t:
+        output += ' '.join(row) + "\n"
+    output += "\n" + final_states
 
     return output
 
