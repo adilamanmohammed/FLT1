@@ -1,0 +1,95 @@
+Script started on 2024-02-01 14:47:00+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="150" LINES="21"]
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt[10P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10@1.txt file[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Test String(w): ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc
+Length of transitions: 2
+{1}
+{2}
+{3}
+{4}
+{5}
+{6}
+{7}
+{8}
+8
+1
+Result for test string ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Transitions: [[[1, 2], 1, 1, 0], [0, 3, 0, 0], [0, 0, 4, 0], [5, 0, 0, 0], [0, 6, 0, 0], [0, 7, 0, 0], [8, 0, 0, 0], [8, 8, 8, 0]]
+Test String(w): ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc
+Length of transitions: 2
+{1}
+{2}
+{3}
+{4}
+{5}
+{6}
+{7}
+{8}
+8
+1
+Result for test string ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Test String(w): ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc
+{1}
+{2}
+{3}
+{4}
+{5}
+{6}
+{7}
+Result for test string ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+Test String(w): ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc
+{1}
+{2}
+{3}
+{4}
+{5}
+{6}
+{7}
+Result for test string ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+Test String(w): ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc
+Result for test string ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+Test String(w): ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc
+
+Result for test string ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc
+
+Result for test string ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ l[Kclear
+[H[2J[3J[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ clear
+[H[2J[3J[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ clearpython3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc
+
+Result for test string ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc
+
+Result for test string ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : 
+
+Test String(w): ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc
+
+Result for test string ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc : Reject
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc
+
+Result for test string ababababababbbbbcccccabcabbabbbaaabbccccccaaaacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ exit
+
+Script done on 2024-02-01 14:56:36+00:00 [COMMAND_EXIT_CODE="0"]
