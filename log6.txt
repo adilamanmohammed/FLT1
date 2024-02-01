@@ -1,0 +1,168 @@
+Script started on 2024-02-01 15:19:35+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="150" LINES="21"]
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): aaaaabcabbccccc
+
+Result for test string aaaaabcabbccccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): aaaaabcabbccccc
+
+Result for test string aaaaabcabbccccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kpython3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabab
+
+Test String(w): aaaaabcabbccccc
+
+Result for test string aaaaabcabbccccc : Reject
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcaba
+
+Test String(w): aaaaabcabbccccc
+
+Result for test string aaaaabcabbccccc : Reject
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcaba
+
+Test String(w): aaaaabcababccccc
+
+Result for test string aaaaabcababccccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): aaaaabcabbccccc
+
+Result for test string aaaaabcabbccccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): aaaaabcabbccccc
+
+Result for test string aaaaabcabbccccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabba
+
+Test String(w): aaaaabcabbccccc
+
+Result for test string aaaaabcabbccccc : Reject
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabba
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+  File "/workspaces/FLT1/prog1.py", line 7
+    global transitions = [[set() for _ in alphabets + ['?']] for _ in states]
+                       ^
+SyntaxError: invalid syntax
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Accept
+[[[1, 2], 1, 1, 0], [0, 3, 0, 0], [0, 0, 4, 0], [5, 0, 0, 0], [0, 6, 0, 0], [0, 7, 0, 0], [7, 7, 7, 0]]
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Accept
+[[[1, 2], 1, 1, 0], [0, 3, 0, 0], [0, 0, 4, 0], [5, 0, 0, 0], [0, 6, 0, 0], [0, 7, 0, 0], [7, 7, 7, 0]]
+[7]
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+  File "/workspaces/FLT1/prog1.py", line 187
+    global alphabets, transitions, final_states = parse_file('file2.txt')
+                                                ^
+SyntaxError: invalid syntax
+[0;32m@adilamanm01 [1;31m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabba
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabbav
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Reject
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Alphabets: ['a', 'b', 'c', 'v', '?']
+Given pattern : abcabbav
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Reject
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abc
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ python3 prog1.py file1.txt file2.txt file3.txt
+Given pattern : abcabb
+
+Test String(w): aaaaabcabbacccc
+
+Result for test string aaaaabcabbacccc : Accept
+[0;32m@adilamanm01 [0m➜ [1;34m/workspaces/FLT1 [0;36m([1;31mmain[0;36m) [0m$ exit
+
+Script done on 2024-02-01 16:14:02+00:00 [COMMAND_EXIT_CODE="0"]
