@@ -1,5 +1,69 @@
 import sys
 
+import sys
+
+
+def nfsmbuild(substring):
+    alphabets = sorted(set(substring))  # Alphabet without epsilon
+    states = list(range(1, len(substring) + 2)) # list of state numbers
+    transitions = [[set() for _ in alphabets + ['?']] for _ in states]#transition rules for each state 
+
+    #start state transitions
+    i = 0
+    alhpalen= len(alphabets)
+    while i < alhpalen:#each character in alphabets
+        c = alphabets[i]
+        if c == substring[0]:  # If the character matches the first character of the substring, it transitions to the second state also.
+            transitions[0][i] = {1, 2}
+        else:  # Otherwise, it remains in the first state
+            transitions[0][i] = {1}
+        i += 1 
+
+    #remaining states
+    i = 1
+    while i < len(substring):
+        c = substring[i]
+        index = alphabets.index(c)
+        # Increment state number by 1, if not do not 
+        nextstate = i + 2 if i + 1 < len(states) else len(states)
+        transitions[i][index].add(nextstate)
+        i += 1
+
+    # Final state loops back to itself for all characters
+    i = 0
+    while i < len(alphabets):
+        transitions[-1][i] = {len(states)}
+        i += 1
+
+    #epsilon transitions
+    i = 0
+    while i < len(transitions):
+        transitions[i][-1] = set()
+        i += 1
+
+    # Converting sets to strings
+    t = [
+        ['[{}]'.format(','.join(map(str, sorted(state)))) if state else '[]' for state in row]
+        for row in transitions]
+
+    # adding epsilon- '?'
+    epsilon_alphabet = ' '.join(alphabets) + ' ?'
+
+    # Final State
+    finalstates = ' '.join(map(str, [len(states)]))
+
+    #NFSM
+    output = epsilon_alphabet + "\n\n"
+    for r in t:
+        for item in r:
+            output += item + ' '
+        output = output[:-1]  # Remove the last space
+        output += "\n"
+    output += "\n" + finalstates
+
+
+    return output
+
 def eps(transitions, q, epsilon_symbol, alphabets):
     """
     Compute the epsilon closure of a state q in a finite automaton.
@@ -50,7 +114,7 @@ def ndfsmsimulate(transitions, w, alphabets, final_states, start_state=1):
 
     # Start with the epsilon closure of the start state
     current_state = eps(transitions, start_state, epsilon_symbol, alphabets)
-    print(f"Initial state: {current_state}")
+    # print(f"Initial state: {current_state}")
 
     # Process each symbol in w
     for c in w:
@@ -137,13 +201,18 @@ def length_of_transition(transitions, i, j):
 
 
 
+
+
+
+
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 4:
         print("Usage: python your_script_name.py <path_to_file2> <path_to_file3>")
         sys.exit(1)
 
-    file2_path = sys.argv[1]
-    file3_path = sys.argv[2]
+    file1_path = sys.argv[1]
+    file2_path = sys.argv[2]
+    file3_path = sys.argv[3]
 
 
 
@@ -151,16 +220,27 @@ if __name__ == "__main__":
 # alphabets = []
 # transitions = []
 # final_states = []
+file1_path = sys.argv[1]
+with open(file1_path, 'r') as file1:
+    inputpattern = file1.read()
+
+specificationnfsm = nfsmbuild(inputpattern)
+
+with open(file2_path, 'w') as file2:
+    file2.write(specificationnfsm)
+
 
 
 # Example Usage
 alphabets, transitions, final_states = parse_file('file2.txt')
-print("Alphabets:", alphabets)
-print("Transitions:", transitions)
-print("Final States:", final_states)
+# print("Alphabets:", alphabets)
+# print("Transitions:", transitions)
+# print("Final States:", final_states)
 
 # Read test string from file3.txt
 test_string = read_test_string(file3_path)
+print("Given pattern :", inputpattern)
+print()
 print("Test String(w):", test_string)
 
 
@@ -169,7 +249,7 @@ final_state_length=len(final_states)
 # print(transitions[0][1])
 
 length = length_of_transition(transitions, 0, 0)
-print("Length of transitions:", length)
+# print("Length of transitions:", length)
 
 #calling transitions by positions
 # print(transitions[0][2])
@@ -182,13 +262,22 @@ print("Length of transitions:", length)
 # print(eps(transitions, 3, '?', alphabets))
 # print(eps(transitions, 4, '?', alphabets))
 
-for i in range(1,transition_length+1):
-    print(eps(transitions, i, '?', alphabets))
+# for i in range(1,transition_length+1):
+#     print(eps(transitions, i, '?', alphabets))
 
-print(transition_length)
-print(final_state_length)
+# print(transition_length)
+# print(final_state_length)
 
 
 # Simulate NDFSM
 result = ndfsmsimulate(transitions, test_string, alphabets, final_states)
+print()
 print("Result for test string",test_string,":", result)
+
+
+
+
+
+# print()
+# print(inputpattern)
+# print(nfsmbuild(inputpattern))
