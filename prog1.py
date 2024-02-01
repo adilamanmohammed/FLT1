@@ -1,7 +1,5 @@
 import sys
 
-import sys
-
 
 def nfsmbuild(substring):
     alphabets = sorted(set(substring))  # Alphabet without epsilon
