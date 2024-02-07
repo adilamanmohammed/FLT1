@@ -199,12 +199,14 @@ def length_of_transition(transitions, i, j):
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Usage: python your_script_name.py <path_to_file2> <path_to_file3>")
+        print("Command line path is wrong !! Usage example: python your_script_name.py <path_to_file2> <path_to_file3>")
         sys.exit(1)
 
     file1_path = sys.argv[1]
     file2_path = sys.argv[2]
     file3_path = sys.argv[3]
+
+    
 
 
 
@@ -212,15 +214,21 @@ if __name__ == "__main__":
 # alphabets = []
 # transitions = []
 # final_states = []
+import sys
+
 file1_path = sys.argv[1]
 with open(file1_path, 'r') as file1:
-    inputpattern = file1.read()
+    inputpattern = file1.read().replace(' ', '')  # This removes spaces from the input pattern.
+
+if len(inputpattern)==0:
+    print("Empty input pattern file or file1.txt is empty")
+    sys.exit(1)
+
 
 specificationnfsm = nfsmbuild(inputpattern)
 
 with open(file2_path, 'w') as file2:
     file2.write(specificationnfsm)
-
 
 
 # Example Usage
@@ -231,6 +239,9 @@ alphabets, transitions, final_states = parse_file('file2.txt')
 
 # Read test string from file3.txt
 test_string = read_test_string(file3_path)
+if len(test_string)==0:
+    print("file3 or test string is empty")
+    sys.exit(1)
 print("Given pattern :", inputpattern)
 print()
 print("Test String(w):", test_string)
